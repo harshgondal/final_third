@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Courier New', Courier, monospace;
+            background-color: hsl(268, 75%, 9%);
+            background-image: url('static/image.png'); /* Optional background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace; /* Changed font family */
+            font-size: 3.5em;
+            color: #ffcc00; /* Changed color to gold */
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: -150px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow for effect */
+        }
+
+
+        form {
+            background: linear-gradient(145deg, #3498db); /* Glossy and fluorescent background */
+            padding: 40px;
+            border-radius: 25px; /* Increased border-radius for rounded edges */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Slightly deeper shadow for more emphasis */
+            width: 400px; /* Increased size of the container */
+            position: relative;
+            border: 8px solid #ffffff; /*e border for sharp contrast */
+        }
+
+        label {
+            font-size: 1.1em;
+            color: #fff;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border: 2px solid #007bff; /* Blue border on focus */
+        }
+
+        button {
+          font-family: 'Courier New', Courier, monospace;
+            width: 100%;
+            padding: 12px;
+            background-color: #00c6ff;
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #007bff;
+            transform: scale(1.05); /* Slight scale increase on hover */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        li {
+            color: red;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>LOGIN</h1>
+        <form method="post" action="/login">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Machines Per Assembly Line</title>
+</head>
+<body>
+    <h1>Machines Per Assembly Line</h1>
+    <form method="post">
+        <label for="assembly_id">Assembly Line ID:</label>
+        <input type="text" id="assembly_id" name="assembly_id"><br><br>
+        <button type="submit">View</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number of Machines per Assembly Line</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f5f7fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('static/image.png'); /* Optional background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            text-align: center;
+            margin-top: -30px; /* Moves the heading slightly upwards */
+            margin-bottom: 30px; /* Adds space between the heading and the form container */
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent background */
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+            max-width: 500px; /* Increased the width */
+            width: 100%;
+            text-align: center;
+        }
+
+        label {
+            font-size: 1.2em;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1.1em;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button, .menu-button {
+            font-family: 'Courier New', Courier, monospace;
+            width: 100%; /* Ensures both buttons take full width */
+            padding: 12px;
+            background-color: hsl(222, 26%, 31%); /* Bootstrap green */
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px; /* Adds space between buttons */
+            text-decoration: none; /* Removes underline */
+        }
+
+        button:hover {
+            background-color: gray /* Darker green on hover */
+        }
+
+        /* "Back to Menu" Button */
+        .menu-button {
+            background-color: hsl(222, 26%, 31%); /* Blue background color for menu button */
+            display: block;
+            text-decoration: none; /* Ensures no underline */
+            text-align: center;
+        }
+
+        .menu-button:hover {
+            background-color: gray; /* Darker blue on hover */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        li {
+            color: red;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        /* Media query for mobile responsiveness */
+        @media (max-width: 600px) {
+            form {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            button, .menu-button {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1> Number of Machines per Assembly Line</h1> <!-- Heading is now outside the container -->
+
+    <form method="post">
+        <label for="assembly_id">Assembly Line ID:</label>
+        <input type="text" id="assembly_id" name="assembly_id">
+
+        <!-- <label for="new_prod_status">New Production Status:</label>
+        <input type="text" id="new_prod_status" name="new_prod_status"> -->
+
+        <button type="submit">View</button>
+        
+        <!-- "Back to Menu" Button inside the form container -->
+        <a href="/menu" class="menu-button">Back to Menu</a> <!-- Change the href to the actual menu page URL -->
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </form>
+</body>
+</html>

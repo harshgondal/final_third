@@ -1,0 +1,139 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>View Production Status</title>
+</head>
+<body>
+    <h1>View Production Status</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Production Status</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f5f7fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('static/image.png'); /* Optional background image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            text-align: center;
+            margin-top: -30px; /* Moves the heading slightly upwards */
+            margin-bottom: 30px; /* Adds space between the heading and the form container */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent background */
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+            max-width: 800px; /* Increased the width */
+            width: 100%;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        ul li {
+            background: #e9ecef;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            color: #495057;
+            text-align: left;
+        }
+
+        .menu-button {
+            font-family: 'Courier New', Courier, monospace;
+            width: 100%; /* Ensures button takes full width */
+            padding: 12px;
+            background-color: hsl(222, 26%, 31%); /* Bootstrap green */
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px; /* Adds space above the button */
+            text-decoration: none; /* Removes underline */
+            display: block;
+        }
+
+        .menu-button:hover {
+            background-color: gray; /* Darker green on hover */
+        }
+
+        /* Media query for mobile responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .menu-button {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>View Production Status</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="text-center text-muted">No messages to display.</p>
+            {% endif %}
+        {% endwith %}
+        <a href="/menu" class="menu-button">Back to Menu</a>
+    </div>
+</body>
+</html>
+
+
+
+
