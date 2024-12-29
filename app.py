@@ -7,11 +7,7 @@ import os
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
-con = oracledb.connect(
-    user=os.getenv("DB_USER"),
-    password=os.getenv("DB_PASSWORD"),
-    dsn=os.getenv("DB_DSN")
-)
+con = oracledb.connect(user="SYSTEM", password="Harsh123", dsn="localhost/xepdb1")
 cur = con.cursor()
 
 @app.route('/')
@@ -324,5 +320,4 @@ def view_supplier_limit():
 
     return render_template('view_supplier_limit.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
