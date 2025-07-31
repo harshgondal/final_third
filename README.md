@@ -3,14 +3,14 @@
 1. This **Project** aims to develop a Database Management System in order to simplify and streamline the intricate process of managing
 automobile assembly plant operations and production.
 
-2. The Management System provides a range of features, including updating product status, generating monthly
+2. The **Management System** provides a range of features, including updating product status, generating monthly
  expense reports, managing inventory suppliers, and more.
 
 3. The **Tech stack** used for building the system is:-
 
-   1. UI/UX- HTML, CSS, Javascript
-    2. Backend- Python- Flask Framework
-     3. Database- Oracle SQL
+    . UI/UX- HTML, CSS, Javascript
+    . Backend- Python- Flask Framework
+    . Database- Oracle SQL
   
 # How to Run:
 
