@@ -8,9 +8,9 @@ automobile assembly plant operations and production.
 
 3. The **Tech stack** used for building the system is:-
 
-    . UI/UX- HTML, CSS, Javascript
-    . Backend- Python- Flask Framework
-    . Database- Oracle SQL
+    1. UI/UX- HTML, CSS, Javascript
+    2. Backend- Python- Flask Framework
+    3. Database- Oracle SQL
   
 # How to Run:
 
